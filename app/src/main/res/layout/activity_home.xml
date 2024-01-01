@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgInstagramLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/intagram_text_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgChat"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgInstagramLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgInstagramLogo"
+        app:srcCompat="@drawable/ic_chat" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txChatNotif"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_circle_red"
+        android:gravity="center"
+        android:text="@string/_1"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/imgChat"
+        app:layout_constraintTop_toTopOf="@id/imgChat"
+        tools:ignore="SmallSp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgLove"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="18dp"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgChat"
+        app:layout_constraintEnd_toStartOf="@id/imgChat"
+        app:layout_constraintTop_toTopOf="@id/imgChat"
+        app:srcCompat="@drawable/ic_love" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/bg_circle_red"
+        app:layout_constraintEnd_toEndOf="@id/imgLove"
+        app:layout_constraintTop_toTopOf="@id/imgLove" />
 
     <include
         android:id="@+id/story1"
@@ -11,9 +65,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/imgInstagramLogo" />
 
     <include
         android:id="@+id/story2"
@@ -110,11 +164,11 @@
         android:id="@+id/vCaption"
         android:layout_width="0dp"
         android:layout_height="200dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_corner10_grey"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/vAction" />
 
     <View
