@@ -29,5 +29,10 @@ class HomeActivity : AppCompatActivity() {
             .circleCrop()
             .into(binding.story3.imgStory)
 
+        Glide.with(this)
+            .load(R.drawable.cat)
+            .circleCrop()
+            .into(binding.imgProfile.imgStory)
+
     }
 }

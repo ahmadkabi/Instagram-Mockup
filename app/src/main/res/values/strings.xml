@@ -2,4 +2,6 @@
     <string name="app_name">UI Collection</string>
     <string name="username">Username</string>
     <string name="_1">1</string>
+    <string name="hosico_cat">hosico_cat</string>
+    <string name="hosico_cat_u2022_original_audio">hosico_cat • Original Audio</string>
 </resources>
