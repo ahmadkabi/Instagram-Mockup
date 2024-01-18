@@ -176,23 +176,48 @@
         app:layout_constraintTop_toTopOf="@id/txUserName"
         app:srcCompat="@drawable/ic_verified" />
 
-    <View
-        android:id="@+id/vContent"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgFeed"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/dummy_grey"
-        app:layout_constraintTop_toBottomOf="@id/vLine" />
+        android:layout_marginTop="14dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/imgProfile"
+        app:srcCompat="@drawable/cat" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/_1_33"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/imgFeed"
+        app:layout_constraintTop_toTopOf="@id/imgFeed" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSound"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_circle_black_overlay"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgFeed"
+        app:layout_constraintEnd_toEndOf="@id/imgFeed"
+        app:srcCompat="@drawable/ic_no_sound"
+        app:tint="@color/white" />
 
     <View
         android:id="@+id/vAction"
         android:layout_width="120dp"
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="510dp"
         android:background="@drawable/bg_corner10_grey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vContent" />
+        app:layout_constraintTop_toBottomOf="@id/imgProfile" />
 
     <View
         android:id="@+id/vCaption"
