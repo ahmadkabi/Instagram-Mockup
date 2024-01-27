@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.UICollection" parent="Base.Theme.UICollection" />
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

@@ -16,5 +16,7 @@
     <color name="ig_red">#ff0038</color>
     <color name="ig_blue">#03A9F4</color>
 
+    <color name="tx_grey">#727272</color>
+
 
 </resources>

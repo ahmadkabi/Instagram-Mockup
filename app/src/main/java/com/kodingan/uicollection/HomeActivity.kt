@@ -1,8 +1,12 @@
 package com.kodingan.uicollection
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Typeface.BOLD
 import android.os.Bundle
-import com.bumptech.glide.Glide
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.style.StyleSpan
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.kodingan.uicollection.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -14,25 +18,45 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Glide.with(this)
-            .load(R.drawable.cat)
-            .circleCrop()
-            .into(binding.story1.imgStory)
+        buildLikedText()
+        buildCaption()
+    }
 
-        Glide.with(this)
-            .load(R.drawable.cat)
-            .circleCrop()
-            .into(binding.story2.imgStory)
+    private fun buildLikedText() {
+        val builder = SpannableStringBuilder("Liked by ")
 
-        Glide.with(this)
-            .load(R.drawable.cat)
-            .circleCrop()
-            .into(binding.story3.imgStory)
+        val omameSpannable = SpannableString("omame_munchkin ")
+        val othersSpannable = SpannableString("2.462 others")
 
-        Glide.with(this)
-            .load(R.drawable.cat)
-            .circleCrop()
-            .into(binding.imgProfile.imgStory)
+        omameSpannable.setSpan(
+            StyleSpan(BOLD), 0, omameSpannable.length, 0
+        )
+        othersSpannable.setSpan(
+            StyleSpan(BOLD), 0, othersSpannable.length, 0
+        )
+
+        builder.append(omameSpannable)
+        builder.append("and ")
+        builder.append(othersSpannable)
+
+        binding.txLiked.setText(builder, TextView.BufferType.SPANNABLE)
 
     }
+
+    private fun buildCaption() {
+        val builder = SpannableStringBuilder("")
+
+        val pisco = SpannableString("pisco_cat ")
+
+        pisco.setSpan(
+            StyleSpan(BOLD), 0, pisco.length, 0
+        )
+
+        builder.append(pisco)
+        builder.append("When you are eating your French fries in peace.... Your girlfriend be like")
+
+        binding.txCaption.setText(builder, TextView.BufferType.SPANNABLE)
+
+    }
+
 }
