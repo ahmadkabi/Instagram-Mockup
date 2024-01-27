@@ -261,18 +261,19 @@
                 app:srcCompat="@drawable/ic_bookmark" />
 
             <com.google.android.material.imageview.ShapeableImageView
-
                 android:id="@+id/imgLover2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
-                android:padding="3dp"
+                android:padding="1dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="@id/imgLover1"
                 app:layout_constraintStart_toStartOf="@id/imgLover1"
                 app:layout_constraintTop_toTopOf="@id/imgLover1"
                 app:shapeAppearanceOverlay="@style/Circular"
-                app:srcCompat="@drawable/cat" />
+                app:srcCompat="@drawable/cat"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imgLover1"
@@ -289,6 +290,17 @@
                 app:strokeColor="@color/white"
                 app:strokeWidth="2dp" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txLiked"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/liked_by_omame_munchkin_and_2_462_others"
+                app:layout_constraintBottom_toBottomOf="@id/imgLover1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgLover2"
+                app:layout_constraintTop_toTopOf="@id/imgLover1" />
 
             <View
                 android:id="@+id/vAction"
