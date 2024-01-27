@@ -260,6 +260,36 @@
                 app:layout_constraintTop_toTopOf="@id/imgFeedLove"
                 app:srcCompat="@drawable/ic_bookmark" />
 
+            <com.google.android.material.imageview.ShapeableImageView
+
+                android:id="@+id/imgLover2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@id/imgLover1"
+                app:layout_constraintStart_toStartOf="@id/imgLover1"
+                app:layout_constraintTop_toTopOf="@id/imgLover1"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/cat" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgLover1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:padding="1dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgFeedLove"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/cat"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp" />
+
+
             <View
                 android:id="@+id/vAction"
                 android:layout_width="120dp"
