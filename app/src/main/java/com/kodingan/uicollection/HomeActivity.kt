@@ -19,6 +19,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         buildLikedText()
+        buildCaption()
     }
 
     private fun buildLikedText() {
@@ -39,6 +40,22 @@ class HomeActivity : AppCompatActivity() {
         builder.append(othersSpannable)
 
         binding.txLiked.setText(builder, TextView.BufferType.SPANNABLE)
+
+    }
+
+    private fun buildCaption() {
+        val builder = SpannableStringBuilder("")
+
+        val pisco = SpannableString("pisco_cat ")
+
+        pisco.setSpan(
+            StyleSpan(BOLD), 0, pisco.length, 0
+        )
+
+        builder.append(pisco)
+        builder.append("When you are eating your French fries in peace.... Your girlfriend be like")
+
+        binding.txCaption.setText(builder, TextView.BufferType.SPANNABLE)
 
     }
 
