@@ -1,4 +1,4 @@
-package com.kodingan.uicollection
+package com.kodingan.instagrammockup
 
 import android.graphics.Typeface.BOLD
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.kodingan.uicollection.databinding.ActivityHomeBinding
+import com.kodingan.instagrammockup.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
 

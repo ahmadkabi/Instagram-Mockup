@@ -1,4 +1,4 @@
-package com.kodingan.uicollection
+package com.kodingan.instagrammockup
 
 import org.junit.Test
 

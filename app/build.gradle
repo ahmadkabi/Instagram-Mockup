@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.kodingan.uicollection'
+    namespace 'com.kodingan.instagrammockup'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.kodingan.uicollection"
+        applicationId "com.kodingan.instagrammockup"
         minSdk 24
         targetSdk 33
         versionCode 1
