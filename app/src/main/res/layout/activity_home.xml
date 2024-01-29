@@ -323,19 +323,52 @@
                 android:textColor="@color/tx_grey"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txCaption"
+                app:layout_constraintTop_toBottomOf="@id/txCaption" />
 
-                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgAddComment"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txViewComment"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/cat" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txAddComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/add_a_comment"
+                android:textColor="@color/tx_grey"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/imgAddComment"
+                app:layout_constraintStart_toEndOf="@id/imgAddComment"
+                app:layout_constraintTop_toTopOf="@id/imgAddComment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txPostTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/_5_days_ago"
+                android:textColor="@color/tx_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgAddComment" />
 
             <View
                 android:id="@+id/vAction"
                 android:layout_width="120dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="650dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/bg_corner10_grey"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+                app:layout_constraintTop_toBottomOf="@id/txPostTime" />
 
             <View
                 android:id="@+id/vCaption"
