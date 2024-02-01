@@ -1,2 +1,2 @@
-This Project showcases a one of the ways to build Instagram UI on Android.
+This Project showcases one of the ways to build Instagram UI on Android.
 
