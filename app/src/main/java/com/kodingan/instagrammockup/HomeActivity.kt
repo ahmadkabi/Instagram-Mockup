@@ -25,7 +25,10 @@ class HomeActivity : AppCompatActivity() {
 
     private fun buildBottomNavigation() {
 
-        var currentFragment: Fragment
+        var currentFragment:Fragment = HomeFragment.newInstance()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.hostFragment, currentFragment)
+            .commit()
 
         binding.bottomNav.setOnItemSelectedListener {
 
