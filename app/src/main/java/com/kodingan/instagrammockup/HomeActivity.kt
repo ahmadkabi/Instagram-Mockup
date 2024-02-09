@@ -7,6 +7,7 @@ import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.kodingan.instagrammockup.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -18,44 +19,48 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        buildLikedText()
-        buildCaption()
+
+        buildBottomNavigation()
     }
 
-    private fun buildLikedText() {
-        val builder = SpannableStringBuilder("Liked by ")
+    private fun buildBottomNavigation() {
 
-        val omameSpannable = SpannableString("omame_munchkin ")
-        val othersSpannable = SpannableString("2.462 others")
+        var currentFragment: Fragment
 
-        omameSpannable.setSpan(
-            StyleSpan(BOLD), 0, omameSpannable.length, 0
-        )
-        othersSpannable.setSpan(
-            StyleSpan(BOLD), 0, othersSpannable.length, 0
-        )
+        binding.bottomNav.setOnItemSelectedListener {
 
-        builder.append(omameSpannable)
-        builder.append("and ")
-        builder.append(othersSpannable)
+            when (it.itemId) {
+                R.id.navigation_home -> {
+                    currentFragment = HomeFragment.newInstance()
+                }
 
-        binding.txLiked.setText(builder, TextView.BufferType.SPANNABLE)
+                R.id.navigation_search -> {
+                    currentFragment = SearchFragment.newInstance()
+                }
 
-    }
+                R.id.navigation_post -> {
+                    currentFragment = PostFragment.newInstance()
+                }
 
-    private fun buildCaption() {
-        val builder = SpannableStringBuilder("")
+                R.id.navigation_reel -> {
+                    currentFragment = ReelFragment.newInstance()
+                }
 
-        val pisco = SpannableString("pisco_cat ")
+                R.id.navigation_account -> {
+                    currentFragment = AccountFragment.newInstance()
+                }
 
-        pisco.setSpan(
-            StyleSpan(BOLD), 0, pisco.length, 0
-        )
+                else -> {
+                    currentFragment = HomeFragment.newInstance()
+                }
+            }
 
-        builder.append(pisco)
-        builder.append("When you are eating your French fries in peace.... Your girlfriend be like")
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.hostFragment, currentFragment)
+                .commit()
 
-        binding.txCaption.setText(builder, TextView.BufferType.SPANNABLE)
+            true
+        }
 
     }
 
