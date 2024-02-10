@@ -1,5 +1,6 @@
 package com.kodingan.instagrammockup
 
+import android.content.res.ColorStateList
 import android.graphics.Typeface.BOLD
 import android.os.Bundle
 import android.text.SpannableString
@@ -7,6 +8,7 @@ import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.kodingan.instagrammockup.databinding.ActivityHomeBinding
 
@@ -25,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun buildBottomNavigation() {
 
-        var currentFragment:Fragment = HomeFragment.newInstance()
+        var currentFragment: Fragment = HomeFragment.newInstance()
         supportFragmentManager.beginTransaction()
             .replace(R.id.hostFragment, currentFragment)
             .commit()
@@ -61,6 +63,27 @@ class HomeActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.hostFragment, currentFragment)
                 .commit()
+
+            if (it.itemId == R.id.navigation_reel) {
+                binding.bottomNav.setBackgroundResource(R.color.black)
+                binding.bottomNav.itemIconTintList =
+                    ColorStateList.valueOf(
+                        ContextCompat.getColor(
+                            this,
+                            R.color.white
+                        )
+                    )
+
+            } else {
+                binding.bottomNav.setBackgroundResource(R.color.white)
+                binding.bottomNav.itemIconTintList =
+                    ColorStateList.valueOf(
+                        ContextCompat.getColor(
+                            this,
+                            R.color.black
+                        )
+                    )
+            }
 
             true
         }
