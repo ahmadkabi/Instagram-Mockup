@@ -3,12 +3,12 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_off"
+        android:icon="@drawable/selector_home"
         android:title="@string/home" />
 
     <item
         android:id="@+id/navigation_search"
-        android:icon="@drawable/ic_search_off"
+        android:icon="@drawable/selector_search"
         android:title="@string/search" />
 
     <item
@@ -18,7 +18,7 @@
 
     <item
         android:id="@+id/navigation_reel"
-        android:icon="@drawable/ic_reel_off"
+        android:icon="@drawable/selector_reel"
         android:title="@string/reel" />
 
     <item
