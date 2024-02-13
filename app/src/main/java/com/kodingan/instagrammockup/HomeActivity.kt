@@ -1,20 +1,20 @@
 package com.kodingan.instagrammockup
 
 import android.content.res.ColorStateList
-import android.graphics.Typeface.BOLD
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.SpannableStringBuilder
-import android.text.style.StyleSpan
-import android.widget.TextView
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.imageview.ShapeableImageView
 import com.kodingan.instagrammockup.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+
+    private lateinit var imgAccount: ShapeableImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,27 +32,39 @@ class HomeActivity : AppCompatActivity() {
             .replace(R.id.hostFragment, currentFragment)
             .commit()
 
+        buildAccountMenuItem()
+
         binding.bottomNav.setOnItemSelectedListener {
 
             when (it.itemId) {
                 R.id.navigation_home -> {
                     currentFragment = HomeFragment.newInstance()
+
+                    imgAccount.strokeColor = getColorStateList(android.R.color.transparent)
                 }
 
                 R.id.navigation_search -> {
                     currentFragment = SearchFragment.newInstance()
+
+                    imgAccount.strokeColor = getColorStateList(android.R.color.transparent)
                 }
 
                 R.id.navigation_post -> {
                     currentFragment = PostFragment.newInstance()
+
+                    imgAccount.strokeColor = getColorStateList(android.R.color.transparent)
                 }
 
                 R.id.navigation_reel -> {
                     currentFragment = ReelFragment.newInstance()
+
+                    imgAccount.strokeColor = getColorStateList(android.R.color.transparent)
                 }
 
                 R.id.navigation_account -> {
                     currentFragment = AccountFragment.newInstance()
+
+                    imgAccount.strokeColor = getColorStateList(android.R.color.black)
                 }
 
                 else -> {
@@ -88,6 +100,24 @@ class HomeActivity : AppCompatActivity() {
             true
         }
 
+    }
+
+    private fun buildAccountMenuItem() {
+        val menuItem = LayoutInflater
+            .from(this)
+            .inflate(
+                R.layout.menu_item_bottom_nav_account,
+                binding.bottomNav,
+                false
+            )
+
+        imgAccount = menuItem.findViewById(R.id.imgAccount)
+        imgAccount.strokeColor = getColorStateList(android.R.color.transparent)
+
+        val itemView = binding.bottomNav.findViewById<BottomNavigationItemView>(
+            R.id.navigation_account
+        )
+        itemView.addView(menuItem)
     }
 
 }
