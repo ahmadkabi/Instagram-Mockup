@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.imageview.ShapeableImageView
 import com.kodingan.instagrammockup.databinding.ActivityHomeBinding
+import com.kodingan.instagrammockup.search.SearchFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -27,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun buildBottomNavigation() {
 
-        var currentFragment: Fragment = HomeFragment.newInstance()
+        var currentFragment: Fragment = SearchFragment.newInstance()
         supportFragmentManager.beginTransaction()
             .replace(R.id.hostFragment, currentFragment)
             .commit()
