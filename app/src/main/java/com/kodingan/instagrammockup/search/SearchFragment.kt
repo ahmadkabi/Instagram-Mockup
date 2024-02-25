@@ -31,7 +31,37 @@ class SearchFragment : Fragment() {
     private fun buildRv() {
         val spanCount = 3
         val adapter = SearchFeedAdapter()
-        adapter.addItems(resources.getStringArray(R.array.search_feeds).toCollection(ArrayList()))
+
+        val drawables = arrayOf(
+            R.drawable.cat_1,
+            R.drawable.cat_2,
+            R.drawable.cat_3,
+            R.drawable.cat_4,
+            R.drawable.cat_5,
+            R.drawable.cat_6,
+            R.drawable.cat_7,
+            R.drawable.cat_8,
+            R.drawable.cat_9,
+            R.drawable.cat_10,
+            R.drawable.cat_11,
+            R.drawable.cat_12,
+            R.drawable.cat_13,
+            R.drawable.cat_14,
+            R.drawable.cat_15,
+            R.drawable.cat_16,
+            R.drawable.cat_17,
+            R.drawable.cat_18,
+            R.drawable.cat_19,
+            R.drawable.cat_20,
+            R.drawable.cat_21,
+            R.drawable.cat_22,
+            R.drawable.cat_23,
+            R.drawable.cat_24,
+            R.drawable.cat_25,
+            R.drawable.cat_26,
+        )
+
+        adapter.addItems(drawables.toList())
         binding.rv.adapter = adapter
 
         val itemDecoration = ItemDecorationGridVertical(

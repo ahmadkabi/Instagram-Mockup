@@ -8,7 +8,7 @@ import com.kodingan.instagrammockup.databinding.ItemSearchFeedBinding
 
 class SearchFeedAdapter : RecyclerView.Adapter<SearchFeedAdapter.MyViewHolder>() {
 
-    private val items = arrayListOf<String>()
+    private val items = arrayListOf<Int>()
 
     inner class MyViewHolder(val binding: ItemSearchFeedBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -30,17 +30,19 @@ class SearchFeedAdapter : RecyclerView.Adapter<SearchFeedAdapter.MyViewHolder>()
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = items[position]
 
+        holder.binding.img.setImageResource(item)
+
         holder.itemView.setOnClickListener {
-            Toast.makeText(holder.itemView.context, item, Toast.LENGTH_SHORT).show()
+            Toast.makeText(holder.itemView.context, position.toString(), Toast.LENGTH_SHORT).show()
         }
     }
 
-    fun addItem(item: String) {
+    fun addItem(item: Int) {
         items.add(item)
         notifyItemInserted(items.lastIndex)
     }
 
-    fun addItems(items: List<String>) {
+    fun addItems(items: List<Int>) {
         this.items.addAll(items)
         notifyItemRangeChanged(0, itemCount)
     }
