@@ -8,6 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kodingan.instagrammockup.R
 import com.kodingan.instagrammockup.databinding.FragmentSearchBinding
+import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.invisible
+import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.multiple
+import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.reel
+import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.single
+import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.sponsored
 
 class SearchFragment : Fragment() {
 
@@ -61,7 +66,40 @@ class SearchFragment : Fragment() {
             R.drawable.cat_26,
         )
 
-        adapter.addItems(drawables.toList())
+        val types = arrayOf(
+            multiple,
+            single,
+            reel,
+            multiple,
+            multiple,
+            single,
+            single,
+            multiple,
+            invisible,
+            single,
+            sponsored,
+            single,
+            single,
+            invisible,
+            single,
+            multiple,
+            reel,
+            reel,
+            single,
+            single,
+            multiple,
+            invisible,
+            single,
+            sponsored,
+            single,
+            single,
+        )
+
+        val items = mutableListOf<SearchFeedModel>()
+        for (i in drawables.indices) {
+            items.add(SearchFeedModel(types[i], drawables[i]))
+        }
+        adapter.addItems(items)
         binding.rv.adapter = adapter
 
         val itemDecoration = ItemDecorationGridVertical(
