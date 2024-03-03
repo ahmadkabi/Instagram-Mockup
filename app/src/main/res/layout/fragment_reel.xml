@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@color/black_2" />
+        app:srcCompat="@drawable/cat" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgCapture"
@@ -82,7 +82,7 @@
         android:id="@+id/txShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         android:text="11.4K"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/imgMore"
@@ -102,8 +102,8 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgSound"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="20dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,8 +113,8 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgAvatar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="20dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@id/txCaption"
@@ -123,11 +123,24 @@
         app:srcCompat="@drawable/cat_5" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="instacatcorner"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
+        app:layout_constraintStart_toEndOf="@id/imgAvatar"
+        app:layout_constraintTop_toTopOf="@id/imgAvatar" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txCaption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="Run boy, run ..."
+        android:text="Run boy, run &#x1F602;..."
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/txSound"
         app:layout_constraintStart_toStartOf="@id/txSound" />
