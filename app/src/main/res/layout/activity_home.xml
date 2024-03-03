@@ -17,6 +17,7 @@
         android:layout_height="54dp"
         android:background="@color/white"
         app:itemActiveIndicatorStyle="@style/TransparentActiveIndicator"
+        app:itemIconTint="@color/black"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav_menu" />
