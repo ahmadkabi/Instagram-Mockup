@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.imageview.ShapeableImageView
 import com.kodingan.instagrammockup.databinding.ActivityHomeBinding
+import com.kodingan.instagrammockup.reel.ReelFragment
 import com.kodingan.instagrammockup.search.SearchFragment
 
 class HomeActivity : AppCompatActivity() {

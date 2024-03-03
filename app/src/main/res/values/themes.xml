@@ -11,6 +11,10 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="RoundedCorner">
+        <item name="cornerSize">16%</item>
+    </style>
+
     <style name="TransparentActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@android:color/transparent</item>
     </style>

@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup
+package com.kodingan.instagrammockup.reel
 
 import android.os.Bundle
 import android.view.LayoutInflater
