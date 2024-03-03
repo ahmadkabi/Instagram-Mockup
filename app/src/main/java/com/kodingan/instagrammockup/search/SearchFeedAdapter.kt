@@ -4,7 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.kodingan.instagrammockup.databinding.ItemSearchFeedBinding
+import com.kodingan.instagrammockup.util.BlurTransformation
 import com.kodingan.instagrammockup.util.gone
 import com.kodingan.instagrammockup.util.visible
 
@@ -67,6 +69,7 @@ class SearchFeedAdapter : RecyclerView.Adapter<SearchFeedAdapter.MyViewHolder>()
                 holder.binding.imgMultiple.gone()
                 holder.binding.imgReel.gone()
                 holder.binding.txSponsored.gone()
+
             }
 
             sponsored -> {
@@ -76,7 +79,19 @@ class SearchFeedAdapter : RecyclerView.Adapter<SearchFeedAdapter.MyViewHolder>()
                 holder.binding.txSponsored.visible()
             }
         }
-        holder.binding.img.setImageResource(item.imageResource)
+
+        when (item.itemType) {
+            invisible -> {
+                Glide.with(holder.itemView.context)
+                    .load(item.imageResource) // or url
+                    .transform(BlurTransformation(holder.itemView.context))
+                    .into(holder.binding.img)
+            }
+
+            else -> {
+                holder.binding.img.setImageResource(item.imageResource)
+            }
+        }
 
         holder.itemView.setOnClickListener {
             Toast.makeText(holder.itemView.context, position.toString(), Toast.LENGTH_SHORT).show()
