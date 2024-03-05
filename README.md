@@ -1,4 +1,4 @@
-# Instagram Mockup
+# Instagram Clone
 
 ![preview](readme/project.png)
 
