@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup
+package com.kodingan.instagramclone
 
 import org.junit.Test
 

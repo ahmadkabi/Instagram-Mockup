@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.kodingan.instagrammockup'
+    namespace 'com.kodingan.instagramclone'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.kodingan.instagrammockup"
+        applicationId "com.kodingan.instagramclone"
         minSdk 24
         targetSdk 33
         versionCode 1

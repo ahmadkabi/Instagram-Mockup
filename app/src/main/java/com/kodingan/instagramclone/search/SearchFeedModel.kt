@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup.search
+package com.kodingan.instagramclone.search
 
 data class SearchFeedModel(
     val itemType: Int,

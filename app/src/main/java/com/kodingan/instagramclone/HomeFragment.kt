@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup
+package com.kodingan.instagramclone
 
 import android.graphics.Typeface
 import android.os.Bundle
@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.kodingan.instagrammockup.databinding.FragmentHomeBinding
+import com.kodingan.instagramclone.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 

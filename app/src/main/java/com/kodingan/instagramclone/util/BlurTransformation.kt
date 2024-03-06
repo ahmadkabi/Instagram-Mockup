@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup.util
+package com.kodingan.instagramclone.util
 
 import android.content.Context
 import android.graphics.Bitmap

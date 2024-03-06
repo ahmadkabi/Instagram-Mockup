@@ -1,14 +1,14 @@
-package com.kodingan.instagrammockup.search
+package com.kodingan.instagramclone.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.kodingan.instagrammockup.databinding.ItemSearchFeedBinding
-import com.kodingan.instagrammockup.util.BlurTransformation
-import com.kodingan.instagrammockup.util.gone
-import com.kodingan.instagrammockup.util.visible
+import com.kodingan.instagramclone.databinding.ItemSearchFeedBinding
+import com.kodingan.instagramclone.util.BlurTransformation
+import com.kodingan.instagramclone.util.gone
+import com.kodingan.instagramclone.util.visible
 
 class SearchFeedAdapter : RecyclerView.Adapter<SearchFeedAdapter.MyViewHolder>() {
 

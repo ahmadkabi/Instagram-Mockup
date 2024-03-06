@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup.search
+package com.kodingan.instagramclone.search
 
 import android.graphics.Rect
 import android.view.View

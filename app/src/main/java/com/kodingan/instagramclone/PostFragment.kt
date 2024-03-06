@@ -1,29 +1,29 @@
-package com.kodingan.instagrammockup.reel
+package com.kodingan.instagramclone
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.kodingan.instagrammockup.databinding.FragmentReelBinding
+import com.kodingan.instagramclone.databinding.FragmentPostBinding
 
-class ReelFragment : Fragment() {
+class PostFragment : Fragment() {
 
-    lateinit var binding: FragmentReelBinding
+    lateinit var binding: FragmentPostBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentReelBinding.inflate(layoutInflater)
+        binding = FragmentPostBinding.inflate(layoutInflater)
         return binding.root
     }
 
     companion object {
 
-        fun newInstance(): ReelFragment {
-            return ReelFragment()
+        fun newInstance(): PostFragment {
+            return PostFragment()
         }
 
     }

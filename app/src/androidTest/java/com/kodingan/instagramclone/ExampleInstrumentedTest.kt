@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup
+package com.kodingan.instagramclone
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.kodingan.instagrammockup", appContext.packageName)
+        assertEquals("com.kodingan.instagramclone", appContext.packageName)
     }
 }

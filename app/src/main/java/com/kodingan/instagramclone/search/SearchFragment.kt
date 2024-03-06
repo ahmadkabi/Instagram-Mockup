@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup.search
+package com.kodingan.instagramclone.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import com.kodingan.instagrammockup.R
-import com.kodingan.instagrammockup.databinding.FragmentSearchBinding
-import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.invisible
-import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.multiple
-import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.reel
-import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.single
-import com.kodingan.instagrammockup.search.SearchFeedAdapter.Companion.sponsored
+import com.kodingan.instagramclone.R
+import com.kodingan.instagramclone.databinding.FragmentSearchBinding
+import com.kodingan.instagramclone.search.SearchFeedAdapter.Companion.invisible
+import com.kodingan.instagramclone.search.SearchFeedAdapter.Companion.multiple
+import com.kodingan.instagramclone.search.SearchFeedAdapter.Companion.reel
+import com.kodingan.instagramclone.search.SearchFeedAdapter.Companion.single
+import com.kodingan.instagramclone.search.SearchFeedAdapter.Companion.sponsored
 
 class SearchFragment : Fragment() {
 

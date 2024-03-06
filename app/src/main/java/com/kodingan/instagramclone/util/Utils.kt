@@ -1,4 +1,4 @@
-package com.kodingan.instagrammockup.util
+package com.kodingan.instagramclone.util
 
 import android.view.View
 import android.view.View.GONE
