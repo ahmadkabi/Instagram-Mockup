@@ -134,6 +134,18 @@
         app:layout_constraintStart_toEndOf="@id/imgAvatar"
         app:layout_constraintTop_toTopOf="@id/imgAvatar" />
 
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/follow"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
+        app:layout_constraintStart_toEndOf="@id/txUserName"
+        app:layout_constraintTop_toTopOf="@id/imgAvatar"
+        app:strokeColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txCaption"

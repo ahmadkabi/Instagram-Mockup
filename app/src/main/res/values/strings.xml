@@ -16,6 +16,7 @@
     <string name="reel">Reel</string>
     <string name="account">Account</string>
     <string name="sponsored">Sponsored</string>
+    <string name="follow">Follow</string>
 
     <string-array name="search_feeds">
         <item>1</item>
