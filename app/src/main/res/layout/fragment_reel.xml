@@ -36,14 +36,12 @@
         android:id="@+id/txLove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="24dp"
         android:text="1.5M"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/imgComment"
         app:layout_constraintEnd_toEndOf="@id/imgSound"
-        app:layout_constraintStart_toStartOf="@id/imgSound"
-
-        />
+        app:layout_constraintStart_toStartOf="@id/imgSound" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgComment"
@@ -60,7 +58,7 @@
         android:id="@+id/txComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="24dp"
         android:text="4,532"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/imgShare"
@@ -82,7 +80,7 @@
         android:id="@+id/txShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="24dp"
         android:text="11.4K"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/imgMore"
@@ -147,7 +145,6 @@
         app:layout_constraintTop_toTopOf="@id/imgAvatar"
         app:rippleColor="@color/white"
         app:strokeColor="@color/white" />
-
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txCaption"
