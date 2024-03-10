@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.imageview.ShapeableImageView
+import com.kodingan.instagramclone.account.AccountFragment
 import com.kodingan.instagramclone.databinding.ActivityHomeBinding
 import com.kodingan.instagramclone.reel.ReelFragment
 import com.kodingan.instagramclone.search.SearchFragment
