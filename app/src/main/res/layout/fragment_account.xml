@@ -13,7 +13,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="kodingan.io"
-        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,14 +29,133 @@
         app:layout_constraintTop_toTopOf="@id/txUserName"
         app:srcCompat="@drawable/ic_arrow_down" />
 
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_circle_red"
+        app:layout_constraintBottom_toBottomOf="@id/txUserName"
+        app:layout_constraintStart_toEndOf="@id/imgArrowDown"
+        app:layout_constraintTop_toTopOf="@id/txUserName" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgAddPost"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/txUserName"
+        app:layout_constraintEnd_toStartOf="@id/imgMenu"
+        app:layout_constraintTop_toTopOf="@id/txUserName"
+        app:srcCompat="@drawable/ic_add_post" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgMenu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/txUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txUserName"
+        app:srcCompat="@drawable/ic_menu" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@id/txUserName"
+        app:layout_constraintTop_toBottomOf="@id/txUserName"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:srcCompat="@drawable/cat" />
+
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txPosts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/account"
+        android:text="14"
+        android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/txLblPosts"
+        app:layout_constraintEnd_toStartOf="@id/txFollowers"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/imgAvatar"
+        app:layout_constraintTop_toTopOf="@id/imgAvatar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1M"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/txFollowing"
+        app:layout_constraintStart_toEndOf="@id/txPosts"
+        app:layout_constraintTop_toTopOf="@id/txPosts" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/txFollowers"
+        app:layout_constraintTop_toTopOf="@id/txPosts" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txLblPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="posts"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
+        app:layout_constraintEnd_toEndOf="@id/txPosts"
+        app:layout_constraintStart_toStartOf="@id/txPosts"
+        app:layout_constraintTop_toBottomOf="@id/txPosts" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txLblFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="followers"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/txFollowers"
+        app:layout_constraintStart_toStartOf="@id/txFollowers"
+        app:layout_constraintTop_toTopOf="@id/txLblPosts" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txLblFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="following"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/txFollowing"
+        app:layout_constraintStart_toStartOf="@id/txFollowing"
+        app:layout_constraintTop_toTopOf="@id/txLblPosts" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
