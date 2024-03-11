@@ -1,4 +1,4 @@
-package com.kodingan.instagramclone
+package com.kodingan.instagramclone.account
 
 import android.os.Bundle
 import android.view.LayoutInflater
