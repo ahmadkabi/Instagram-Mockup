@@ -188,13 +188,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="Kodingan "
-        android:textSize="13sp"
+        android:text="Kodingan &#x1F601;"
         android:textColor="@color/black"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="@id/txTopBarUsername"
-
         app:layout_constraintTop_toBottomOf="@id/lyInQuite" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="0dp"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey_search"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="@id/txTopBarUsername"
+        app:layout_constraintTop_toBottomOf="@id/txAbout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShareProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="0dp"
+        android:text="Share Profile"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey_search"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toEndOf="@id/btnEditProfile"
+        app:layout_constraintTop_toBottomOf="@id/txAbout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
