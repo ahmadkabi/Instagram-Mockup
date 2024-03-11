@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txUserName"
+        android:id="@+id/txTopBarUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -24,9 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@id/txUserName"
-        app:layout_constraintStart_toEndOf="@id/txUserName"
-        app:layout_constraintTop_toTopOf="@id/txUserName"
+        app:layout_constraintBottom_toBottomOf="@id/txTopBarUsername"
+        app:layout_constraintStart_toEndOf="@id/txTopBarUsername"
+        app:layout_constraintTop_toTopOf="@id/txTopBarUsername"
         app:srcCompat="@drawable/ic_arrow_down" />
 
     <View
@@ -34,18 +34,18 @@
         android:layout_height="10dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/bg_circle_red"
-        app:layout_constraintBottom_toBottomOf="@id/txUserName"
+        app:layout_constraintBottom_toBottomOf="@id/txTopBarUsername"
         app:layout_constraintStart_toEndOf="@id/imgArrowDown"
-        app:layout_constraintTop_toTopOf="@id/txUserName" />
+        app:layout_constraintTop_toTopOf="@id/txTopBarUsername" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgAddPost"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toBottomOf="@id/txUserName"
+        app:layout_constraintBottom_toBottomOf="@id/txTopBarUsername"
         app:layout_constraintEnd_toStartOf="@id/imgMenu"
-        app:layout_constraintTop_toTopOf="@id/txUserName"
+        app:layout_constraintTop_toTopOf="@id/txTopBarUsername"
         app:srcCompat="@drawable/ic_add_post" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -53,9 +53,9 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="@id/txUserName"
+        app:layout_constraintBottom_toBottomOf="@id/txTopBarUsername"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/txUserName"
+        app:layout_constraintTop_toTopOf="@id/txTopBarUsername"
         app:srcCompat="@drawable/ic_menu" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -64,8 +64,8 @@
         android:layout_height="80dp"
         android:layout_marginTop="24dp"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="@id/txUserName"
-        app:layout_constraintTop_toBottomOf="@id/txUserName"
+        app:layout_constraintStart_toStartOf="@id/txTopBarUsername"
+        app:layout_constraintTop_toBottomOf="@id/txTopBarUsername"
         app:shapeAppearanceOverlay="@style/Circular"
         app:srcCompat="@drawable/cat" />
 
@@ -141,6 +141,59 @@
         app:layout_constraintEnd_toEndOf="@id/txFollowing"
         app:layout_constraintStart_toStartOf="@id/txFollowing"
         app:layout_constraintTop_toTopOf="@id/txLblPosts" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Kodingan"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/txTopBarUsername"
+        app:layout_constraintTop_toBottomOf="@id/imgAvatar" />
+
+    <LinearLayout
+        android:id="@+id/lyInQuite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_corner12_grey_search"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintStart_toStartOf="@id/txTopBarUsername"
+        app:layout_constraintTop_toBottomOf="@id/txUsername">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_quite"
+            app:tint="@color/tx_grey" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="In quite mode"
+            android:textColor="@color/tx_grey"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Kodingan "
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/txTopBarUsername"
+
+        app:layout_constraintTop_toBottomOf="@id/lyInQuite" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
